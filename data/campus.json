@@ -8,110 +8,92 @@
       "y": 78
     },
     {
-      "id": "admin",
-      "name": "Admin Block",
+      "id": "main-building",
+      "name": "Main Building",
       "type": "building",
       "x": 35,
-      "y": 65
+      "y": 65,
+      "floors": 7
     },
     {
-      "id": "library",
-      "name": "Central Library",
-      "type": "facility",
+      "id": "nmb",
+      "name": "NMB Building",
+      "type": "building",
       "x": 65,
       "y": 35
     },
     {
-      "id": "cse",
-      "name": "CSE Department",
-      "type": "department",
+      "id": "building-3",
+      "name": "Building 3",
+      "type": "building",
       "x": 72,
       "y": 70
     },
     {
-      "id": "canteen",
-      "name": "Canteen",
-      "type": "facility",
-      "x": 43,
-      "y": 28
-    },
-    {
-      "id": "auditorium",
-      "name": "Auditorium",
-      "type": "facility",
-      "x": 17,
-      "y": 28
-    },
-    {
-      "id": "lab",
-      "name": "Computer Lab",
-      "type": "lab",
+      "id": "building-4",
+      "name": "Building 4",
+      "type": "building",
       "x": 88,
       "y": 45
     },
     {
-      "id": "parking",
-      "name": "Parking Area",
-      "type": "parking",
-      "x": 10,
-      "y": 92
+      "id": "office",
+      "name": "Office",
+      "type": "department",
+      "building": "main-building",
+      "floor": 1,
+      "x": 35,
+      "y": 65
+    },
+    {
+      "id": "administrative-office",
+      "name": "Administrative Office",
+      "type": "department",
+      "building": "main-building",
+      "floor": 1,
+      "x": 35,
+      "y": 65
+    },
+    {
+      "id": "cse-ds",
+      "name": "CSE (Data Science)",
+      "type": "department",
+      "building": "main-building",
+      "floor": 3,
+      "x": 35,
+      "y": 65
     }
   ],
   "paths": [
     {
       "from": "gate",
-      "to": "admin",
+      "to": "main-building",
       "distance": 120
     },
     {
       "from": "gate",
-      "to": "auditorium",
+      "to": "nmb",
       "distance": 170
     },
     {
-      "from": "gate",
-      "to": "parking",
-      "distance": 60
-    },
-    {
-      "from": "admin",
-      "to": "library",
+      "from": "main-building",
+      "to": "nmb",
       "distance": 180
     },
     {
-      "from": "admin",
-      "to": "canteen",
+      "from": "main-building",
+      "to": "building-3",
       "distance": 140
     },
     {
-      "from": "admin",
-      "to": "cse",
-      "distance": 210
-    },
-    {
-      "from": "auditorium",
-      "to": "canteen",
-      "distance": 190
-    },
-    {
-      "from": "canteen",
-      "to": "library",
-      "distance": 160
-    },
-    {
-      "from": "library",
-      "to": "cse",
-      "distance": 130
-    },
-    {
-      "from": "library",
-      "to": "lab",
+      "from": "building-3",
+      "to": "building-4",
       "distance": 120
     },
     {
-      "from": "cse",
-      "to": "lab",
-      "distance": 100
+      "from": "nmb",
+      "to": "building-4",
+      "distance": 160
     }
   ]
 }
