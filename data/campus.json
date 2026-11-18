@@ -1,0 +1,117 @@
+{
+  "locations": [
+    {
+      "id": "gate",
+      "name": "Main Gate",
+      "type": "entrance",
+      "x": 12,
+      "y": 78
+    },
+    {
+      "id": "admin",
+      "name": "Admin Block",
+      "type": "building",
+      "x": 35,
+      "y": 65
+    },
+    {
+      "id": "library",
+      "name": "Central Library",
+      "type": "facility",
+      "x": 65,
+      "y": 35
+    },
+    {
+      "id": "cse",
+      "name": "CSE Department",
+      "type": "department",
+      "x": 72,
+      "y": 70
+    },
+    {
+      "id": "canteen",
+      "name": "Canteen",
+      "type": "facility",
+      "x": 43,
+      "y": 28
+    },
+    {
+      "id": "auditorium",
+      "name": "Auditorium",
+      "type": "facility",
+      "x": 17,
+      "y": 28
+    },
+    {
+      "id": "lab",
+      "name": "Computer Lab",
+      "type": "lab",
+      "x": 88,
+      "y": 45
+    },
+    {
+      "id": "parking",
+      "name": "Parking Area",
+      "type": "parking",
+      "x": 10,
+      "y": 92
+    }
+  ],
+  "paths": [
+    {
+      "from": "gate",
+      "to": "admin",
+      "distance": 120
+    },
+    {
+      "from": "gate",
+      "to": "auditorium",
+      "distance": 170
+    },
+    {
+      "from": "gate",
+      "to": "parking",
+      "distance": 60
+    },
+    {
+      "from": "admin",
+      "to": "library",
+      "distance": 180
+    },
+    {
+      "from": "admin",
+      "to": "canteen",
+      "distance": 140
+    },
+    {
+      "from": "admin",
+      "to": "cse",
+      "distance": 210
+    },
+    {
+      "from": "auditorium",
+      "to": "canteen",
+      "distance": 190
+    },
+    {
+      "from": "canteen",
+      "to": "library",
+      "distance": 160
+    },
+    {
+      "from": "library",
+      "to": "cse",
+      "distance": 130
+    },
+    {
+      "from": "library",
+      "to": "lab",
+      "distance": 120
+    },
+    {
+      "from": "cse",
+      "to": "lab",
+      "distance": 100
+    }
+  ]
+}

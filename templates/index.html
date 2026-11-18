@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusWay | Campus Navigation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">C</div>
+    <div><div class="brand">CampusWay</div><div class="tagline">Find your way around campus</div></div>
+    <span class="demo-pill">WORKING DEMO</span>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">CAMPUS NAVIGATION</p>
+      <h1>Your campus,<br><span>one route away.</span></h1>
+      <p class="subtext">Choose where you are and where you want to go. CampusWay finds the shortest connected walking route.</p>
+
+      <div class="planner">
+        <label for="start">Starting point</label>
+        <select id="start"></select>
+        <label for="end">Destination</label>
+        <select id="end"></select>
+        <button id="routeBtn">Find shortest route <span>→</span></button>
+        <button id="resetBtn" class="secondary">Reset map</button>
+      </div>
+
+      <div id="result" class="result" aria-live="polite">
+        <div class="result-heading">Your route will appear here</div>
+        <p>Select two locations to get directions.</p>
+      </div>
+      <p class="note">Demo layout only: replace the sample locations, positions and distances with verified campus data before real-world use.</p>
+    </section>
+
+    <section class="map-panel">
+      <div class="map-head">
+        <div><strong>Campus map</strong><small>Illustrative layout · not to scale</small></div>
+        <div class="legend"><span class="dot start-dot"></span> Start <span class="dot end-dot"></span> Destination</div>
+      </div>
+      <div id="map" class="map" role="img" aria-label="Schematic campus map showing buildings and walking paths">
+        <svg id="paths" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="map-label north">N ↑</div>
+      </div>
+      <div class="map-footer"><span>● Connected walking paths</span><span id="mapStatus">8 places · 11 paths</span></div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>
